@@ -22,8 +22,13 @@ const connectDB = async () => {
     console.log('Connected to MongoDB');
   } catch (error) {
     console.error('MongoDB connection error:', error);
+    throw error; // Throw so the request fails visibly
   }
 };
+
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'API is reachable', env: process.env.NODE_ENV });
+});
 
 // Routes
 app.use('/api/projects', async (req, res, next) => {
