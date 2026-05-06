@@ -1,13 +1,13 @@
 .dot-nav {
   position: fixed;
-  right: 2.5rem;
+  right: 2vw; /* Use viewport width for right positioning */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem 0.8rem;
+  gap: 2vh; /* Use viewport height for gap to scale with screen height */
+  padding: 1.5rem 0.5rem;
   background: var(--color-surface);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -49,8 +49,8 @@
 [data-theme="light"] .moon-icon { display: block; }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 10px; /* Slimmer dots */
+  height: 10px;
   border-radius: 50%;
   background: var(--color-dot-bg);
   border: 1px solid var(--color-border);
