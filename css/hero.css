@@ -21,7 +21,7 @@
 .hero-name {
   font-family: var(--font-heading);
   font-weight: 900;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2.5rem, 6vw, 4rem); /* Reduced from 4.5rem to 4rem */
   color: var(--color-text-primary);
   margin-bottom: var(--space-xs);
   white-space: nowrap;
