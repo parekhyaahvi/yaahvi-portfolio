@@ -1,0 +1,62 @@
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent; /* Ensure fixed background shows through */
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.02em;
+}
+
+.section-title.centered {
+  text-align: center;
+}
+
+/* Common Components */
+
+
+/* Ambient Glow Blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blob-blue {
+  background: var(--color-accent-1);
+  width: 600px;
+  height: 600px;
+  top: -100px;
+  left: -100px;
+}
+
+.blob-purple {
+  background: var(--color-accent-2);
+  width: 500px;
+  height: 500px;
+  bottom: -100px;
+  right: -100px;
+}

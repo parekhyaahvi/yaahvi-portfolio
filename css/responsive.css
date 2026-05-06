@@ -1,0 +1,111 @@
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  
+  .about-grid {
+    gap: var(--space-md);
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  section {
+    padding: var(--space-lg) 0;
+    height: auto; /* Allow height to grow on mobile to prevent overlap */
+    min-height: 100vh;
+    scroll-snap-align: none; /* Disable snap on mobile for better touch UX */
+  }
+
+  html {
+    scroll-snap-type: none;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-visual {
+    order: -1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-md);
+  }
+
+  .profile-image-container {
+    max-width: 280px;
+    box-shadow: 15px 15px 0 var(--color-accent-2);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-panel {
+    padding: 3rem 1.5rem;
+  }
+
+  .contact-icons {
+    gap: 1.5rem;
+  }
+
+  .contact-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 1.2rem;
+  }
+
+  .dot-nav {
+    display: none; /* Hide dot nav on mobile to save space, or move to bottom */
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 2.2rem;
+  }
+
+  .hero-role-container {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-bio {
+    font-size: 1rem;
+  }
+
+
+
+  .project-card__title {
+    font-size: 1.1rem;
+  }
+
+  .contact-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1rem;
+  }
+}
+
+/* Utility to handle landscape phones */
+@media (max-height: 500px) and (orientation: landscape) {
+  section {
+    height: auto;
+    min-height: 100vh;
+  }
+}

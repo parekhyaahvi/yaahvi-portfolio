@@ -1,0 +1,116 @@
+.pulse {
+  padding: var(--space-xl) 0;
+  background: transparent;
+}
+
+.pulse-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-glass);
+}
+
+.pulse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pulse-live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-1);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #ff4d4d;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff4d4d;
+  animation: pulse-glow 1.5s infinite;
+}
+
+.pulse-total {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+}
+
+.stats-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.stats-item:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.stats-flag {
+  font-size: 1.5rem;
+}
+
+.stats-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-location {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+}
+
+.stats-time {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-sub);
+}
+
+.stats-loading {
+  text-align: center;
+  padding: 2rem;
+  font-family: var(--font-mono);
+  color: var(--color-text-sub);
+  font-size: 0.8rem;
+}
+
+@keyframes pulse-glow {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+[data-theme="light"] .stats-item {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .stats-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}

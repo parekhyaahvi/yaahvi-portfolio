@@ -1,0 +1,74 @@
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.05;
+  background: url('https://grainy-gradients.vercel.app/noise.svg');
+  filter: contrast(150%) brightness(100%);
+}
+
+[data-theme="light"] .noise-overlay {
+  opacity: 0.05;
+}
+
+.mesh-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background-color: var(--color-canvas);
+}
+
+.mesh-blob {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  filter: blur(160px);
+  opacity: var(--opacity-blob);
+  animation: meshMove 25s infinite alternate ease-in-out;
+}
+
+.mesh-blob--1 {
+  background: var(--color-blob-1);
+  top: -10%;
+  left: -10%;
+}
+
+.mesh-blob--2 {
+  background: var(--color-blob-2);
+  bottom: -15%;
+  right: -5%;
+  animation-delay: -5s;
+}
+
+.mesh-blob--3 {
+  background: var(--color-blob-3);
+  top: 40%;
+  left: 30%;
+  width: 600px;
+  height: 600px;
+  animation-delay: -10s;
+}
+
+.mesh-blob--4 {
+  background: var(--color-blob-1);
+  bottom: 10%;
+  left: 10%;
+  width: 700px;
+  height: 700px;
+  animation-delay: -3s;
+}
+
+@keyframes meshMove {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(5%, 10%) scale(1.1); }
+  100% { transform: translate(-5%, -5%) scale(0.9); }
+}

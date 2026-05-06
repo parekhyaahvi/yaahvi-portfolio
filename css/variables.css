@@ -1,0 +1,79 @@
+:root {
+  /* Default Theme (Dark) - Black/Red/Orange Palette */
+  --color-canvas:        #000000;                  /* True Black */
+  --color-accent-1:      #F16001;                  /* Vibrant Orange */
+  --color-accent-2:      #C10801;                  /* Deep Fire Red */
+  --color-text-primary:  #ffffff;                  /* Pure White */
+  --color-text-sub:      #D9C3AB;                  /* Sand/Beige subtext */
+  --color-surface:       rgba(255, 255, 255, 0.04);/* Ultra-subtle glass */
+  --color-border:        rgba(255, 255, 255, 0.08);
+  --color-glow-blue:     rgba(241, 96, 1, 0.25);   /* Orange glow */
+  --color-glow-purple:   rgba(193, 8, 1, 0.30);    /* Red glow */
+  --color-skeleton:      rgba(255, 255, 255, 0.03);
+  --color-error:         rgba(255, 255, 255, 0.05);
+  --color-error-border:  rgba(255, 255, 255, 0.1);
+  --color-tag-bg:        rgba(241, 96, 1, 0.1);
+  --color-tag-border:    rgba(241, 96, 1, 0.2);
+  --color-dot-bg:        rgba(217, 195, 171, 0.15);
+  --color-dot-hover:     rgba(217, 195, 171, 0.3);
+
+  /* Blob Colors */
+  --color-blob-1:        #C10801;
+  --color-blob-2:        #F16001;
+  --color-blob-3:        #D9C3AB;
+
+  /* Shadow Tokens */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+  --shadow-lg: 0 12px 24px rgba(0,0,0,0.25);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --opacity-blob:        0.28;
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body:    'Plus Jakarta Sans', sans-serif;
+  --font-mono:    'Space Mono', monospace;
+
+  /* Spacing */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  2rem;
+  --space-lg:  4rem;
+  --space-xl:  8rem;
+
+  /* Z-index */
+  --z-nav: 100;
+  --z-toast: 9999;
+
+  /* Transitions */
+  --transition-theme: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                      color 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                      border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                      box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] {
+  --color-canvas:        #F0E7D5;                  /* Warm Cream background */
+  --color-accent-1:      #0055ff;                  /* Electric but deep blue */
+  --color-accent-2:      #7928ca;                  /* Deep violet */
+  --color-text-primary:  #1a1a1c;                  /* Deep charcoal */
+  --color-text-sub:      #5e626e;                  /* Slate subtext */
+  --color-surface:       rgba(255, 255, 255, 0.6); /* Translucent surface */
+  --color-border:        rgba(0, 0, 0, 0.08);      /* Soft border */
+  --color-glow-blue:     rgba(0, 85, 255, 0.12);
+  --color-glow-purple:   rgba(121, 40, 202, 0.12);
+  --color-skeleton:      rgba(0, 0, 0, 0.04);
+  --color-error:         rgba(0, 0, 0, 0.05);
+  --color-error-border:  rgba(0, 0, 0, 0.15);
+  --color-tag-bg:        rgba(0, 85, 255, 0.06);
+  --color-tag-border:    rgba(0, 85, 255, 0.15);
+  --color-dot-bg:        rgba(0, 0, 0, 0.08);
+  --color-dot-hover:     rgba(0, 0, 0, 0.15);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.04);
+
+  /* Blob Colors - Muted for Light Mode */
+  --color-blob-1:        #a5c4ff;
+  --color-blob-2:        #d8b4fe;
+  --color-blob-3:        #cffafe;
+  --opacity-blob:        0.24;
+}

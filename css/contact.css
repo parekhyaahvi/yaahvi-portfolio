@@ -1,0 +1,93 @@
+.contact {
+  text-align: center;
+}
+
+.contact-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.contact-panel.visible {
+  animation: fadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.3s ease, 
+              background 0.3s ease,
+              border-color 0.3s ease;
+  color: var(--color-text-primary);
+}
+
+.contact-icon--email {
+  width: 80px;
+  height: 80px;
+  border-color: var(--color-border);
+}
+
+.contact-icon:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px var(--color-glow-purple);
+  background: var(--color-dot-hover);
+  border-color: var(--color-accent-2);
+}
+
+.contact-subtext {
+  color: var(--color-text-sub);
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+}
+
+/* Toast Styles */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--color-canvas);
+  border: 1px solid var(--color-accent-1);
+  color: var(--color-text-primary);
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              opacity 0.4s ease;
+  z-index: var(--z-toast);
+  pointer-events: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.toast.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}

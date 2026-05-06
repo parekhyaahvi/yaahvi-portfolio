@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaahvi's Portfolio</title>
+    <meta name="description"
+        content="Building scalable web applications with modern technologies. Portfolio of Yaahvi Riddhish Parekh, a Full Stack Developer and Problem Solver.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="stylesheet" href="css/textures.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="theme-transition-ready">
+    <!-- Premium Background Effects -->
+    <div class="noise-overlay"></div>
+    <div class="mesh-gradient">
+        <div class="mesh-blob mesh-blob--1"></div>
+        <div class="mesh-blob mesh-blob--2"></div>
+        <div class="mesh-blob mesh-blob--3"></div>
+        <div class="mesh-blob mesh-blob--4"></div>
+    </div>
+
+    <!-- Global Pulse Section (Real-time Insights) -->
+    <!-- (Moved to bottom) -->
+
+    <!-- Dot Navigation -->
+    <nav class="dot-nav" aria-label="Page navigation">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2" />
+                <path d="M12 20v2" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m17.66 17.66 1.41 1.41" />
+                <path d="M2 12h2" />
+                <path d="M20 12h2" />
+                <path d="m6.34 17.66-1.41 1.41" />
+                <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+        </button>
+        <div class="dot active" data-section="home" aria-label="Home section"></div>
+        <div class="dot" data-section="about" aria-label="About section"></div>
+        <div class="dot" data-section="skills" aria-label="Skills section"></div>
+        <div class="dot" data-section="pulse" aria-label="Pulse section"></div>
+        <div class="dot" data-section="contact" aria-label="Contact section"></div>
+    </nav>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" role="alert">Copied to clipboard!</div>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section id="home" class="hero" aria-label="Home">
+            <canvas id="particles-canvas"></canvas>
+            <div class="blob blob-blue"></div>
+            <div class="blob blob-purple"></div>
+
+            <div class="hero-content">
+                <h1 class="hero-name">Yaahvi Riddhish Parekh</h1>
+                <div class="hero-role-container">
+                    <span id="typewriter" class="hero-role"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-subheading">Building scalable web applications with modern web-dev technologies</p>
+                <!-- Button removed as per request -->
+            </div>
+        </section>
+
+        <!-- Section 2: About -->
+        <section id="about" class="about" aria-label="About Yaahvi">
+            <div class="about-grid container">
+                <div class="about-visual">
+                    <div class="profile-image-container">
+                        <img src="assets/profile.jpg" alt="Yaahvi Riddhish Parekh" class="profile-image">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="about-bio">
+                        I am a <span class="tech-tag-inline">[Full Stack Developer]</span> passionate about <span
+                            class="tech-tag-inline">[problem-solving]</span> and modern <span
+                            class="tech-tag-inline">[web development]</span>. With a strong foundation in building
+                        scalable applications, I blend technical expertise with clean design to craft seamless digital
+                        experiences.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Skills -->
+        <section id="skills" class="skills" aria-label="Skills">
+            <div class="container">
+                <h2 class="section-title centered">Technical Expertise</h2>
+                <div id="skills-grid" class="skills-grid">
+                    <!-- Quadrants will be rendered here by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- (Projects Section Removed) -->
+
+        <!-- Section 5: Global Pulse -->
+        <section id="pulse" class="pulse" aria-label="Global Activity">
+            <div class="container">
+                <h2 class="section-title centered">Global Pulse</h2>
+                <div class="pulse-card">
+                    <div class="pulse-header">
+                        <div class="pulse-live-indicator">
+                            <span class="pulse-dot"></span>
+                            LIVE ACTIVITY
+                        </div>
+                        <div class="pulse-total">
+                            <span class="stats-total-count">0</span> VISITS
+                        </div>
+                    </div>
+                    <div class="stats-feed">
+                        <div class="stats-loading">Establishing connection...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Contact -->
+        <section id="contact" class="contact" aria-label="Contact">
+            <div class="contact-panel">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="contact-icons">
+                    <button id="email-btn" class="contact-icon contact-icon--email" aria-label="Copy email address">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                    </button>
+                    <a href="#" id="github-link" class="contact-icon" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg>
+                    </a>
+                    <a href="#" id="linkedin-link" class="contact-icon" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect width="4" height="12" x="2" y="9" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="contact-subtext">Let's build something amazing together</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/typewriter.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/scrollObserver.js"></script>
+    <script src="js/dotNav.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/clipboard.js"></script>
+</body>
+
+</html>
