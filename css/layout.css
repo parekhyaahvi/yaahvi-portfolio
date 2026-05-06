@@ -1,21 +1,21 @@
 section {
   min-height: 100vh;
   scroll-snap-align: start;
-  overflow: visible;
+  overflow: visible; /* Allow content to grow if needed */
   position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   background: transparent;
   z-index: 1;
-  padding: 10vh 0; /* Vertical padding based on viewport height */
+  padding: 80px 0; /* Add top/bottom padding for breathing room */
 }
 
 .container {
-  width: 90%; /* Fluid width */
-  max-width: 1400px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10% 0 5%; /* Fluid safe zones: 10% on right for sidebar, 5% on left */
+  padding: 0 5rem 0 var(--space-md); /* Added 5rem on right for sidebar clearance */
   position: relative;
   z-index: 1;
 }
