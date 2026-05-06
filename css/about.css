@@ -1,6 +1,6 @@
 .about-grid {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 1fr 1.5fr; /* Switch to fr units for perfect fit */
   align-items: center;
   gap: var(--space-lg);
 }

@@ -5,11 +5,12 @@ const Visitor = require('../models/Visitor');
 // POST /api/stats/track - Log a new visit
 router.post('/track', async (req, res) => {
   try {
-    // In production, we get the IP from req.headers['x-forwarded-for']
-    const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+    // Get client IP (Vercel uses x-forwarded-for)
+    const forwarded = req.headers['x-forwarded-for'];
+    const ip = forwarded ? forwarded.split(',')[0] : req.socket.remoteAddress;
     
     // For local dev, if IP is ::1 or 127.0.0.1, we'll mock it so the user sees results
-    if (ip === '::1' || ip === '127.0.0.1') {
+    if (!ip || ip === '::1' || ip === '127.0.0.1' || ip === '::ffff:127.0.0.1') {
       const mockVisitor = new Visitor({
         country: 'India',
         city: 'Mumbai (Local)',
@@ -44,7 +45,11 @@ router.post('/track', async (req, res) => {
     }
   } catch (error) {
     console.error('Tracking error:', error);
-    res.status(500).json({ error: 'Failed to track visit' });
+    res.status(500).json({ 
+      error: 'Failed to track visit', 
+      details: error.message,
+      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+    });
   }
 });
 

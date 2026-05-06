@@ -18,7 +18,7 @@ const connectDB = async () => {
   if (isConnected) return;
   try {
     await mongoose.connect(process.env.MONGODB_URI, {
-      dbName: 'portfolio', // Explicitly set DB name
+      dbName: 'yaahvi-portfolio', // Explicitly set DB name
       serverSelectionTimeoutMS: 5000 // Timeout after 5s
     });
     isConnected = true;
