@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE5E5" />
+      <stop offset="100%" stop-color="#FFD1D1" />
+    </linearGradient>
+    <linearGradient id="yGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4B72" />
+      <stop offset="100%" stop-color="#FF7A45" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#FF4B72" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  
+  <!-- Soft, fun background -->
+  <rect width="512" height="512" rx="140" fill="url(#bg)" />
+  
+  <!-- Cute little accent circles (abstract flowers/dots) -->
+  <circle cx="120" cy="120" r="24" fill="#FFB347" />
+  <circle cx="400" cy="160" r="16" fill="#FF7A45" />
+  <circle cx="360" cy="400" r="32" fill="#FF4B72" />
+  <circle cx="150" cy="380" r="18" fill="#FFB347" />
+  
+  <!-- The Y shape -->
+  <g filter="url(#shadow)">
+    <!-- Left arm -->
+    <path d="M 160 160 Q 220 220 256 280" fill="none" stroke="url(#yGrad)" stroke-width="64" stroke-linecap="round" />
+    <!-- Right arm -->
+    <path d="M 352 160 Q 292 220 256 280" fill="none" stroke="url(#yGrad)" stroke-width="64" stroke-linecap="round" />
+    <!-- Stem -->
+    <path d="M 256 280 L 256 380" fill="none" stroke="url(#yGrad)" stroke-width="64" stroke-linecap="round" />
+  </g>
+</svg>

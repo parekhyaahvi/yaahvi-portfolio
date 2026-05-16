@@ -53,12 +53,12 @@
 }
 
 [data-theme="light"] {
-  --color-canvas:        #F0E7D5;                  /* Warm Cream background */
+  --color-canvas:        #DDC5A3;                  /* Updated Warm Sand background */
   --color-accent-1:      #0055ff;                  /* Electric but deep blue */
   --color-accent-2:      #7928ca;                  /* Deep violet */
   --color-text-primary:  #1a1a1c;                  /* Deep charcoal */
   --color-text-sub:      #5e626e;                  /* Slate subtext */
-  --color-surface:       rgba(255, 255, 255, 0.6); /* Translucent surface */
+  --color-surface:       #F0E7D5;                  /* Updated solid surface color for cards */
   --color-border:        rgba(0, 0, 0, 0.08);      /* Soft border */
   --color-glow-blue:     rgba(0, 85, 255, 0.12);
   --color-glow-purple:   rgba(121, 40, 202, 0.12);

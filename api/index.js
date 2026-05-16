@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 
 const projectRoutes = require('./routes/projects');
@@ -46,6 +47,16 @@ app.use('/api/stats', async (req, res, next) => {
 
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+// Serve static files from the root directory
+app.use(express.static(path.join(__dirname, '..')));
+
+app.use((req, res, next) => {
+  if (req.url.startsWith('/api') || req.url.startsWith('/health')) {
+    return next();
+  }
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 app.get('/', (req, res) => {

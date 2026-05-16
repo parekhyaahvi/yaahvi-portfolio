@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yaahvi's Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <meta name="description"
         content="Building scalable web applications with modern technologies. Portfolio of Yaahvi Riddhish Parekh, a Full Stack Developer and Problem Solver.">
 
@@ -28,6 +29,7 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/stats.css">
     <link rel="stylesheet" href="css/textures.css">
+    <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
@@ -67,6 +69,7 @@
         <div class="dot active" data-section="home" aria-label="Home section"></div>
         <div class="dot" data-section="about" aria-label="About section"></div>
         <div class="dot" data-section="skills" aria-label="Skills section"></div>
+        <div class="dot" data-section="projects" aria-label="Projects section"></div>
         <div class="dot" data-section="pulse" aria-label="Pulse section"></div>
         <div class="dot" data-section="contact" aria-label="Contact section"></div>
     </nav>
@@ -123,7 +126,52 @@
             </div>
         </section>
 
-        <!-- (Projects Section Removed) -->
+        <!-- Section 4: Projects -->
+        <section id="projects" class="projects" aria-label="Projects">
+            <div class="container">
+                <h2 class="section-title centered">Featured Projects</h2>
+                
+                <div class="slider-wrapper">
+                    <button class="slider-btn prev" aria-label="Previous Project">❮</button>
+                    
+                    <div class="slider-container">
+                        <div class="slider-track">
+                            <!-- TaskFlow -->
+                            <a href="https://taskflow-yaahvi.vercel.app" target="_blank" class="project-block" data-name="TaskFlow" data-color="#F16001">
+                                <div class="project-image-wrapper">
+                                    <img src="assets/taskflow.png" alt="TaskFlow Landing Page">
+                                    <div class="project-overlay">
+                                        <div class="project-label-internal">TaskFlow</div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- Coming Soon 1 -->
+                            <div class="project-block" data-name="Coming Soon" data-color="var(--color-text-sub)">
+                                <div class="project-image-wrapper">
+                                    <div class="coming-soon-placeholder">Coming Soon</div>
+                                    <div class="project-overlay">
+                                        <div class="project-label-internal">Coming Soon</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Coming Soon 2 -->
+                            <div class="project-block" data-name="Coming Soon" data-color="var(--color-text-sub)">
+                                <div class="project-image-wrapper">
+                                    <div class="coming-soon-placeholder">Coming Soon</div>
+                                    <div class="project-overlay">
+                                        <div class="project-label-internal">Coming Soon</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="slider-btn next" aria-label="Next Project">❯</button>
+                </div>
+            </div>
+        </section>
 
         <!-- Section 5: Global Pulse -->
         <section id="pulse" class="pulse" aria-label="Global Activity">
@@ -192,6 +240,7 @@
     <script src="js/skills.js"></script>
     <script src="js/stats.js"></script>
     <script src="js/clipboard.js"></script>
+    <script src="js/projects.js"></script>
 </body>
 
 </html>
